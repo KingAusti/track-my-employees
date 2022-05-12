@@ -36,4 +36,4 @@ const questions = [
     }
 ];
 
-modules.export = questions;
+module.exports = questions;
