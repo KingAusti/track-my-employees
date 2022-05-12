@@ -3,6 +3,7 @@ const questions = require('./questions');
 const db = require('./models');
 require("console.table");
 
+//main switch statement which holds all question functions
 function init() {
     prompt(questions)
     .then(res => {
@@ -39,6 +40,7 @@ function init() {
     })
 }
 
+//view all departments function
 function viewDept() {
     
     db.findAllDepartments()
@@ -51,6 +53,7 @@ function viewDept() {
 
 }
 
+//view all roles function
 function viewRole() {
     
     db.findAllRoles()
@@ -63,6 +66,7 @@ function viewRole() {
 
 }
 
+//view all employees function
 function viewEmp() {
     
     db.findAllEmployees()
@@ -74,6 +78,7 @@ function viewEmp() {
     .then(() => init())
 }
 
+//add new dept function
 function addDept() {
 
     prompt([
@@ -95,6 +100,7 @@ function addDept() {
     })   
 }
 
+//add new role function
 function addRole() {
     db.findAllDepartments()
     .then(([rows]) => {
@@ -130,7 +136,9 @@ function addRole() {
     })
 }
 
+//add new employee function
 function addEmp() {
+        //questions prompt
         prompt([
         {
             name: "first_name",
@@ -197,7 +205,7 @@ function addEmp() {
     
 }
 
-
+//update employee role function
 function updRole() {
     db.findAllEmployees()
     .then(([rows]) => {
@@ -206,7 +214,7 @@ function updRole() {
             value: id,
             name: `${first_name} ${last_name}`          
         }))
-
+        //questions prompt
         prompt({
             type: "list",
             name: "employee",

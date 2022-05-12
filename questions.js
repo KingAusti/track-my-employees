@@ -1,3 +1,4 @@
+//top level connection questions
 const questions = [
     {
         type: 'list',
@@ -37,3 +38,4 @@ const questions = [
 ];
 
 module.exports = questions;
+//END
