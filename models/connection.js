@@ -1,9 +1,8 @@
 const mysql = require('mysql2');
 //sql account connection login info
 const db = mysql.createConnection({
-    
-    host: 'localhost',
     // Using dotenv for security and hiding passwords
+    host: 'localhost',    
     // Your MySQL username,
     user: process.env.DB_USER,
     // Your MySQL password
