@@ -1,7 +1,9 @@
+require("dotenv").config();
 const { prompt } = require('inquirer');
 const questions = require('./questions');
 const db = require('./models');
 require("console.table");
+
 
 //main switch statement which holds all question functions
 function init() {

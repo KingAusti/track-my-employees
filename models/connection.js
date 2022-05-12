@@ -1,4 +1,5 @@
 const mysql = require('mysql2');
+//const env = require('env')
 //sql account connection login info
 const db = mysql.createConnection({
     // Using dotenv for security and hiding passwords
@@ -13,9 +14,9 @@ const db = mysql.createConnection({
 
 );
 //throw error if connection is refused
-connection.connect(err => {
+db.connect(err => {
     if(err) throw err;
 })
 
-module.exports = connection;
+module.exports = db;
 //END
