@@ -249,8 +249,5 @@ function updRole() {
     })
 }
 
-
-
-
-init()
+init();
 //END
